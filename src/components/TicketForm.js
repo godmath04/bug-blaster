@@ -27,6 +27,7 @@ export default function TicketForm() {
       description,
       priority,
     };
+    console.log("Ticket enviado:", ticketData);
 
     clearForm();
   };
@@ -45,13 +46,13 @@ export default function TicketForm() {
       </div>
       <div>
         <label>Description</label>
-        <textArea
+        <textarea
           type="text"
           value={description}
           className="form-input"
           onChange={(e) => setDescription(e.target.value)}
           required
-        ></textArea>
+        ></textarea>
       </div>
 
       <fieldset className="priority-fieldset">
